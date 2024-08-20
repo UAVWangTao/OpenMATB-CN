@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-03-14 11:58+0100\n"
+"PO-Revision-Date: 2024-07-17 10:42+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: core/constants.py:32 core/translator.py:4
+msgid "System monitoring"
+msgstr "系统监控"
+
+#: core/constants.py:33
+msgid "Tracking"
+msgstr "追踪"
+
+#: core/constants.py:34
+msgid "Scheduling"
+msgstr "调度"
+
+#: core/constants.py:35
+msgid "Communications"
+msgstr "通讯"
+
+#: core/constants.py:36
+msgid "Resources management"
+msgstr "资源管理"
+
+#: core/constants.py:37
+msgid "Parallel port"
+msgstr "并口"
+
+#: core/constants.py:38
+msgid "Lab streaming layer"
+msgstr "实验室流媒体层"
+
+#: core/constants.py:39
+msgid "Instructions"
+msgstr "指示"
+
+#: core/constants.py:40
+msgid "Generic scales"
+msgstr "通用量表"
+
+#: core/constants.py:41
+msgid "Eye tracker"
+msgstr "眼动追踪"
+
+#: core/constants.py:42
+msgid "Performance"
+msgstr "性能"
+
+#: core/dialog.py:73
+msgid "Press any key to exit"
+msgstr "按任何一个键退出"
+
+#: core/logger.py:126
+msgid "Warning, queue is empty"
+msgstr "警告，队列为空"
+
+#: core/scenario.py:75
+#, python-format
+msgid "%s was not found"
+msgstr "未找到 %s"
+
+#: core/scenario.py:90
+#, python-format
+msgid "Scenario error: %s is not a valid plugin name (l. %s)"
+msgstr "场景错误：%s 不是有效的插件名称 (l. %s)"
+
+#: core/scenario.py:104
+msgid "No error"
+msgstr "没有错误"
+
+#: core/scenario.py:108
+#, python-format
+msgid "There were some errors in the scenario. See the %s file."
+msgstr "场景中存在一些错误。请参阅 %s 文件。"
+
+#: core/scenario.py:176
+#, python-format
+msgid "The (%s) plugin does not have a start command."
+msgstr "(%s) 插件没有启动命令。"
+
+#: core/scenario.py:180
+#, python-format
+msgid "The (%s) plugin does not have a stop command."
+msgstr "(%s) 插件没有停止命令。"
+
+#: core/scenario.py:189
+#, python-format
+msgid "Error on line %s. This event does not trigger any command."
+msgstr "行 %s 出错。此事件不会触发任何命令。"
+
+#: core/scenario.py:193
+#, python-format
+msgid "Error on line %s. Maximum length of an event is 2 (parameter;value)."
+msgstr "行 %s 出错。事件的最大长度为 2（参数；值）。"
+
+#: core/scenario.py:200
+#, python-format
+msgid "Error on line %s. Method (%s) is not available for the plugin (%s)"
+msgstr "行 %s 出错。方法 (%s) 不适用于插件 (%s)"
+
+#: core/scenario.py:217
+#, python-format
+msgid "Warning on line %s. Parameter (%s) has no verification method"
+msgstr "行 %s 上出现警告。参数 (%s) 没有验证方法"
+
+#: core/scenario.py:235
+#, python-format
+msgid "Error on line %s. %s "
+msgstr "%s 行有错误。%s"
+
+#: core/scenario.py:242
+#, python-format
+msgid "Error on line %s. The %s plugin does not have a %s parameter"
+msgstr "%s 行出错。%s 插件没有 %s 参数"
+
+#: core/scenario.py:262
+#, python-format
+msgid "should be a string (not %s)."
+msgstr "应该是一个字符串（而不是 %s）。"
+
+#: core/scenario.py:266
+#, python-format
+msgid "should be a natural (0 included) integer (not %s)."
+msgstr "应该是一个自然整数（包括 0）（不是 %s）。"
+
+#: core/scenario.py:283
+#, python-format
+msgid "should be a positive (0 excluded) integer (not %s)."
+msgstr "应该是一个正整数（0 除外）（不是 %s）。"
+
+#: core/scenario.py:290
+#, python-format
+msgid "should be a boolean (not %s)."
+msgstr "应该是布尔值（而不是 %s）。"
+
+#: core/scenario.py:306
+#, python-format
+msgid "must be (R,G,B,a) or hexadecimal (e.g., #00ff00) values (not %s)"
+msgstr "必须是 (R,G,B,a) 或十六进制（例如 #00ff00）值（不是 %s）"
+
+#: core/scenario.py:312
+#, python-format
+msgid "should be (R,G,B,a) values each comprised between 0 and 255 (not %s)"
+msgstr "应为 (R,G,B,a) 值，每个值介于 0 至 255 之间（不是 %s）"
+
+#: core/scenario.py:317
+#, python-format
+msgid "should be a positive float (not %s)"
+msgstr "应为正浮点数（不是 %s）"
+
+#: core/scenario.py:352
+#, python-format
+msgid "should be comprised in %s (not %s)"
+msgstr "应包含在 %s 中（而不是 %s）"
+
+#: core/scenario.py:359
+#, python-format
+msgid "should be a valid regex expression (not %s)"
+msgstr "应为有效的正则表达式（不是 %s）"
+
+#: core/scenario.py:369
+#, python-format
+msgid "should be an acceptable keyboard key value (not %s). See documentation."
+msgstr "应为可接受的键盘键值（不是 %s）。请参阅文档。"
+
+#: core/scenario.py:385
+#, python-format
+msgid "should be composed of letters [a-z] or digits [0-9] (not %s in %s)"
+msgstr "应由字母 [a-z] 或数字 [0-9] 组成（不是 %s 中的 %s）"
+
+#: core/scenario.py:400
+#, python-format
+msgid "should be composed of valid callsigns (not %s)"
+msgstr "应由有效呼号组成（不是 %s）"
+
+#: core/scenario.py:404
+#, python-format
+msgid "should be a float between 0 and 1 (included) (not %s)"
+msgstr "应为 0 至 1 之间的浮点数（含）（不是 %s）"
+
+#: core/scenario.py:423
+#, python-format
+msgid ""
+"should be available either in the Instruction or Questionnaire folder (not "
+"%s)"
+msgstr "应该可以在说明或问卷文件夹中找到（不是 %s）"
+
+#: core/scheduler.py:52
+#, python-format
+msgid "Session ID: %s"
+msgstr "会话 ID：%s"
+
+#: core/scheduler.py:53
+msgid "Start"
+msgstr "开始"
+
+#: core/widgets/timeline.py:29
+msgid "min."
+msgstr "最小值。"
+
+#: core/window.py:19
+#, python-format
+msgid ""
+"In config.ini, the specified screen index (%s) exceed the number of "
+"available screens (%s). Note that in Python, the first index is 0."
+msgstr ""
+"在 config.ini 中，指定的屏幕索引（%s）超出了可用屏幕的数量（%s）。请注意，在 "
+"Python 中，第一个索引是 0。"
+
+#: core/window.py:96
+msgid "No joystick found"
+msgstr "未找到操纵杆"
+
+#: core/window.py:97
+msgid "Continue"
+msgstr "继续"
+
+#: core/window.py:97
+msgid "Exit"
+msgstr "退出"
+
+#: core/window.py:143
+msgid "You pressed the Escape key. Do you want to quit?"
+msgstr "您按下了 Esc 键。要退出吗？"
+
+#: core/window.py:144 core/window.py:145
+msgid "Yes"
+msgstr "是"
+
+#: core/window.py:144
+msgid "No"
+msgstr "否"
+
+#: core/window.py:193
+#, python-format
+msgid "Error. No placement found for the [%s] alias"
+msgstr "错误。未找到 [%s] 别名的放置位置"
+
+#: main.py:30
+#, python-format
+msgid ""
+"In config.ini, the specified font (%s) is not available. Correct it or leave "
+"it empty to use a default font."
+msgstr ""
+"在 config.ini 中，指定的字体 (%s) 不可用。请更正它或将其留空以使用默认字体。"
+
+#: main.py:40
+#, python-format
+msgid "In config.ini, screen index must be an integer, not %s"
+msgstr "在 config.ini 中，屏幕索引必须是整数，而不是 %s"
+
+#: main.py:50
+#, python-format
+msgid ""
+"In config.ini, [%s] parameter must be a boolean (true or false, not %s)."
+msgstr "在 config.ini 中，[%s] 参数必须是布尔值（true 或 false，而不是 %s）。"
+
+#: plugins/abstract.py:191 plugins/abstract.py:193
+msgid "MANUAL"
+msgstr "手动"
+
+#: plugins/abstract.py:191
+msgid "AUTO"
+msgstr "自动"
+
+#: plugins/communications.py:58
+msgid " does not exist"
+msgstr "不存在"
+
+#: plugins/communications.py:77
+#, python-format
+msgid "Callsign \t\t %s"
+msgstr "呼号 \t\t %s"
+
+#: plugins/genericscales.py:13
+msgid "Press SPACE to validate"
+msgstr "按下空格键验证"
+
+#: plugins/instructions.py:11
+msgid "Press SPACE to continue"
+msgstr "按下空格键继续"
+
+#: plugins/labstreaminglayer.py:19
+msgid "Please enable the OpenMATB stream into your LabRecorder."
+msgstr "请在您的 LabRecorder 中启用 OpenMATB 流。"
+
+#: plugins/parallelport.py:14
+msgid "Python Parallel module is missing. Skipping parallel plugin"
+msgstr "缺少 Python 并行模块。跳过并行插件"
+
+#: plugins/parallelport.py:21
+msgid "The physical parallel port was not found."
+msgstr "未找到物理并行端口。"
+
+#: plugins/resman.py:110
+msgid "Pump status"
+msgstr "泵状态"
+
+#: plugins/scheduling.py:127
+#, python-format
+msgid "Elapsed time \t %s"
+msgstr "已用时间 \t %s"
+
+#: plugins/scheduling.py:136
+#, python-format
+msgid "Remaining time \t %s"
+msgstr "剩余时间 \t %s"
+
+#: replay.py:41
+msgid ""
+"In config.ini, screen index must be an integer, not {config['Openmatb']"
+"['screen_index']}"
+msgstr ""
+"在 config.ini 中，屏幕索引必须是整数，而不是 {config['Openmatb']"
+"['screen_index']}"
