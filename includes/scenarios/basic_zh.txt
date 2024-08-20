@@ -1,0 +1,78 @@
+# 实验场景模板
+# 持续时间单位为毫秒
+# 时间戳的格式为H:MM:SS
+
+# 1. 设置任务参数
+
+# 1.a. 监控任务参数
+0:00:00;sysmon;scales-1-key;F8
+
+# 1.b.i. 资源管理任务参数
+# 更改resman中油罐B的目标水平
+0:00:00;resman;tank-b-target;1000
+
+
+# 1.c. 追踪任务参数
+# 改变追踪箭头颜色
+0:00:00;track;cursorcolor;#009900
+
+# 1.d. 通讯任务参数
+# 更改呼号格式、干扰呼号的数量、语音性别和习语
+0:00:00;communications;callsignregex;[A-Z][A-Z]\d\d
+0:00:00;communications;othercallsignnumber;5
+0:00:00;communications;voicegender;male
+0:00:00;communications;voiceidiom;french
+
+
+# 2. 设置各个任务开始时间
+0:00:00;resman;start
+0:00:00;track;start
+0:00:00;sysmon;start
+0:00:00;scheduling;start
+0:00:00;communications;start
+
+
+# 3. 设置场景事件
+# 展示 NASA-TLX 问卷
+
+0:00:00;genericscales;filename;nasatlx_zh.txt
+0:00:00;genericscales;start
+
+
+# 3.a. 监视任务事件
+# 安排一些仪表故障
+0:00:10;sysmon;scales-1-side;-1
+0:00:10;sysmon;scales-1-failure;True
+0:00:30;sysmon;scales-4-side;1
+0:00:30;sysmon;scales-4-failure;True
+
+# 3.b. 资源管理任务事件
+# 安排自动解决和泵故障
+0:00:00;resman;automaticsolver;True
+0:00:15;resman;pump-3-state;failure
+0:00:25;resman;pump-3-state;off
+0:00:25;resman;automaticsolver;False
+0:00:30;resman;pump-7-state;failure
+0:00:40;resman;pump-7-state;off
+
+# 3.c. 追踪任务事件
+# 安排一些自动追踪
+0:00:20;track;automaticsolver;True
+0:00:40;track;automaticsolver;False
+
+
+# 3.d. 通讯任务事件
+# /!\ 注意在两个提示之间留出足够的时间，以避免声音重叠
+# 安排一些广播提示
+0:00:00;communications;radioprompt;own
+0:00:25;communications;radioprompt;other
+0:00:40;communications;automaticsolver;True
+0:00:45;communications;radioprompt;own
+
+
+# 4. 1 分钟后结束任务
+0:01:00;resman;stop
+0:01:00;track;stop
+0:01:00;sysmon;stop
+0:01:00;communications;stop
+0:01:00;scheduling;stop

@@ -1,0 +1,28 @@
+# 这是一个实验介绍语模板
+# 实验介绍语必须通过简单的HTML标签语法进行格式化
+
+# 以下元素完全支持：
+#    B BLOCKQUOTE BR CENTER CODE DD DIR DL EM FONT H1 H2 H3 H4 H5 H6 I IMG KBD
+#    LI MENU OL P PRE Q SAMP STRONG SUB SUP TT U UL VAR
+
+# 您可以通过<newpage>标签将实验介绍语分为多个部分
+# OpenMATB中有三个常用标签：<h1>、<h2>、<p>，使用这三个标签会自动将文本渲染为预定义的大小、粗细等等
+
+<h1>介绍语示例</h1>
+
+<center>
+<p>这里可以写下你希望展示给被试的<strong>任意介绍语</strong>。</p>
+<p>你可以通过<em>newpage</em>命令将介绍语呈现在多个屏幕。</p>
+</center>
+
+<newpage>
+<h1>介绍语示例</h1>
+<center>
+<p>可以等待按下“Space”键或在给定时间内显示指令。查看文档。</p>
+
+<p>此外，您可以使用 <em>img</em> 标签来呈现图像（必须包含在“includes/img”目录中）。</p>
+
+<p><img src=openmatb.png></p>
+
+<p>更多信息请访问 https://github.com/juliencegarra/OpenMATB</p>
+</center>
