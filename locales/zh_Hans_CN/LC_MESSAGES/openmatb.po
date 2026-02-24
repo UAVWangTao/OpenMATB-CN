@@ -1,0 +1,340 @@
+# OpenMATB 简体中文翻译
+# Copyright (C) 2023-2026 OpenMATB
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenMATB\n"
+"POT-Creation-Date: 2023-03-21 11:42+0100\n"
+"PO-Revision-Date: 2025-02-24 00:00+0800\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Manual\n"
+
+#: core/selector.py
+msgid "Select a scenario"
+msgstr "选择场景"
+
+msgid "Select a session"
+msgstr "选择会话"
+
+msgid "UP/DOWN: Navigate"
+msgstr "上/下方向键：移动"
+
+msgid "Enter: Select"
+msgstr "回车：选择"
+
+msgid "Esc: Quit"
+msgstr "Esc：退出"
+
+msgid "No files found"
+msgstr "未找到文件"
+
+msgid "  (empty)"
+msgstr "  （空）"
+
+#: core/constants.py:37
+msgid "System monitoring"
+msgstr "系统监控"
+
+#: core/constants.py:38
+msgid "Tracking"
+msgstr "跟踪"
+
+#: core/constants.py:39
+msgid "Scheduling"
+msgstr "调度"
+
+#: core/constants.py:40
+msgid "Communications"
+msgstr "通讯"
+
+#: core/constants.py:41
+msgid "Resources management"
+msgstr "资源管理"
+
+#: core/constants.py:42
+msgid "Parallel port"
+msgstr "并行口"
+
+#: core/constants.py:43
+msgid "Lab streaming layer"
+msgstr "实验室流层"
+
+#: core/constants.py:44
+msgid "Instructions"
+msgstr "说明"
+
+#: core/constants.py:45
+msgid "Generic scales"
+msgstr "通用量表"
+
+#: core/constants.py:46
+msgid "Eye tracker"
+msgstr "眼动仪"
+
+#: core/constants.py:47
+msgid "Performance"
+msgstr "绩效"
+
+#: core/error.py:21
+msgid "Warning"
+msgstr "警告"
+
+#: core/error.py:21
+msgid "Error(s)"
+msgstr "错误"
+
+#: core/logger.py:130
+msgid "Warning, queue is empty"
+msgstr "警告：队列为空"
+
+#: core/modaldialog.py:49
+msgid "Exit"
+msgstr "退出"
+
+#: core/modaldialog.py:56
+msgid "Continue"
+msgstr "继续"
+
+#: core/scenario.py:82
+#, python-format
+msgid "%s was not found"
+msgstr "未找到 %s"
+
+#: core/scenario.py:98
+#, python-format
+msgid "Scenario error: %s is not a valid plugin name (l. %s)"
+msgstr "场景错误：%s 不是有效的插件名（第 %s 行）"
+
+#: core/scenario.py:112
+msgid "No error"
+msgstr "无错误"
+
+#: core/scenario.py:116
+#, python-format
+msgid "There were some errors in the scenario. See the %s file."
+msgstr "场景中存在错误，请查看 %s 文件。"
+
+#: core/scenario.py:184
+#, python-format
+msgid "The (%s) plugin does not have a start command."
+msgstr "插件 (%s) 没有启动命令。"
+
+#: core/scenario.py:188
+#, python-format
+msgid "The (%s) plugin does not have a stop command."
+msgstr "插件 (%s) 没有停止命令。"
+
+#: core/scenario.py:197
+#, python-format
+msgid "Error on line %s. This event does not trigger any command."
+msgstr "第 %s 行错误：该事件未触发任何命令。"
+
+#: core/scenario.py:201
+#, python-format
+msgid "Error on line %s. Maximum length of an event is 2 (parameter;value)."
+msgstr "第 %s 行错误：事件最大长度为 2（参数;值）。"
+
+#: core/scenario.py:208
+#, python-format
+msgid "Error on line %s. Method (%s) is not available for the plugin (%s)"
+msgstr "第 %s 行错误：插件 (%s) 不支持方法 (%s)"
+
+#: core/scenario.py:225
+#, python-format
+msgid "Warning on line %s. Parameter (%s) has no verification method"
+msgstr "第 %s 行警告：参数 (%s) 没有校验方法"
+
+#: core/scenario.py:243
+#, python-format
+msgid "Error on line %s. %s "
+msgstr "第 %s 行错误：%s "
+
+#: core/scenario.py:250
+#, python-format
+msgid "Error on line %s. The %s plugin does not have a %s parameter"
+msgstr "第 %s 行错误：插件 %s 没有参数 %s"
+
+#: core/scenario.py:270
+#, python-format
+msgid "should be a string (not %s)."
+msgstr "应为字符串（不是 %s）。"
+
+#: core/scenario.py:274
+#, python-format
+msgid "should be a natural (0 included) integer (not %s)."
+msgstr "应为自然数（含 0）整数（不是 %s）。"
+
+#: core/scenario.py:291
+#, python-format
+msgid "should be a positive (0 excluded) integer (not %s)."
+msgstr "应为正整数（不含 0）（不是 %s）。"
+
+#: core/scenario.py:298
+#, python-format
+msgid "should be a boolean (not %s)."
+msgstr "应为布尔值（不是 %s）。"
+
+#: core/scenario.py:314
+#, python-format
+msgid "must be (R,G,B,a) or hexadecimal (e.g., #00ff00) values (not %s)"
+msgstr "必须为 (R,G,B,a) 或十六进制（如 #00ff00）格式（不是 %s）"
+
+#: core/scenario.py:320
+#, python-format
+msgid "should be (R,G,B,a) values each comprised between 0 and 255 (not %s)"
+msgstr "应为 0 到 255 之间的 (R,G,B,a) 值（不是 %s）"
+
+#: core/scenario.py:325
+#, python-format
+msgid "should be a positive float (not %s)"
+msgstr "应为正浮点数（不是 %s）"
+
+#: core/scenario.py:360
+#, python-format
+msgid "should be comprised in %s (not %s)"
+msgstr "应在 %s 范围内（不是 %s）"
+
+#: core/scenario.py:367
+#, python-format
+msgid "should be a valid regex expression (not %s)"
+msgstr "应为有效的正则表达式（不是 %s）"
+
+#: core/scenario.py:377
+#, python-format
+msgid "should be an acceptable keyboard key value (not %s). See documentation."
+msgstr "应为可接受的键盘键值（不是 %s）。请参阅文档。"
+
+#: core/scenario.py:393
+#, python-format
+msgid "should be composed of letters [a-z] or digits [0-9] (not %s in %s)"
+msgstr "应由字母 [a-z] 或数字 [0-9] 组成（在 %s 中不是 %s）"
+
+#: core/scenario.py:408
+#, python-format
+msgid "should be composed of valid callsigns (not %s)"
+msgstr "应由有效的呼号组成（不是 %s）"
+
+#: core/scenario.py:412
+#, python-format
+msgid "should be a float between 0 and 1 (included) (not %s)"
+msgstr "应为 0 到 1（含）之间的浮点数（不是 %s）"
+
+#: core/scenario.py:431
+#, python-format
+msgid ""
+"should be available either in the Instruction or Questionnaire folder (not "
+"%s)"
+msgstr "应在说明或问卷文件夹中存在（不是 %s）"
+
+#: core/scheduler.py:66
+#, python-format
+msgid "Session ID: %s"
+msgstr "会话 ID：%s"
+
+#: core/widgets/timeline.py:33
+msgid "min."
+msgstr "分钟"
+
+#: core/window.py:35
+#, python-format
+msgid ""
+"In config.ini, the specified screen index exceeds the number of available "
+"screens (%s). Last screen selected."
+msgstr "config.ini 中指定的屏幕索引超过可用屏幕数 (%s)，已选择最后一块屏幕。"
+
+#: core/window.py:45
+msgid ""
+"In config.ini, the specified font is not available. A default font will be "
+"used."
+msgstr "config.ini 中指定的字体不可用，将使用默认字体。"
+
+#: core/window.py:166
+msgid "You hit the Escape key"
+msgstr "您按下了 Escape 键"
+
+#: core/window.py:166
+msgid "Exit OpenMATB?"
+msgstr "是否退出 OpenMATB？"
+
+#: core/window.py:170
+msgid "Pause"
+msgstr "暂停"
+
+#: core/window.py:209
+#, python-format
+msgid "Error. No placement found for the [%s] alias"
+msgstr "错误：未找到 [%s] 别名的布局位置"
+
+#: main.py:37
+#, python-format
+msgid ""
+"In config.ini, [%s] parameter must be a boolean (true or false, not %s). "
+"Defaulting to False"
+msgstr "config.ini 中 [%s] 参数必须为布尔值（true 或 false，不是 %s），已默认为 False"
+
+#: plugins/abstract.py:196 plugins/abstract.py:198
+msgid "MANUAL"
+msgstr "手动"
+
+#: plugins/abstract.py:196
+msgid "AUTO"
+msgstr "自动"
+
+#: plugins/communications.py:62
+msgid " does not exist"
+msgstr " 不存在"
+
+#: plugins/communications.py:81
+#, python-format
+msgid "Callsign \t\t %s"
+msgstr "呼号 \t\t %s"
+
+#: plugins/genericscales.py:17
+msgid "Press SPACE to validate"
+msgstr "按空格键确认"
+
+#: plugins/instructions.py:15
+msgid "Press SPACE to continue"
+msgstr "按空格键继续"
+
+#: plugins/labstreaminglayer.py:23
+msgid "Please enable the OpenMATB stream into your LabRecorder."
+msgstr "请在 LabRecorder 中启用 OpenMATB 流。"
+
+#: plugins/parallelport.py:17
+msgid "Python Parallel module is missing. Skipping parallel plugin"
+msgstr "缺少 Python 并行口模块，已跳过并行口插件"
+
+#: plugins/parallelport.py:23
+msgid "The physical parallel port was not found."
+msgstr "未找到物理并行口。"
+
+#: plugins/resman.py:114
+msgid "Pump status"
+msgstr "油泵状态"
+
+#: plugins/scheduling.py:131
+#, python-format
+msgid "Elapsed time \t %s"
+msgstr "已用时间 \t %s"
+
+#: plugins/scheduling.py:140
+#, python-format
+msgid "Remaining time \t %s"
+msgstr "剩余时间 \t %s"
+
+#: plugins/track.py:41
+msgid "No joystick found"
+msgstr "未找到操纵杆"
+
+#: replay.py:45
+msgid ""
+"In config.ini, screen index must be an integer, not {config['Openmatb']"
+"['screen_index']}"
+msgstr "config.ini 中 screen_index 必须为整数，当前为 {config['Openmatb']['screen_index']}"

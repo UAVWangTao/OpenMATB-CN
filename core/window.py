@@ -32,13 +32,17 @@ class Window(Window):
 
         screen: Any = self.get_screen()
 
-        self._width: int = int(screen.width)
-        self._height: int = int(screen.height)
         self._fullscreen: bool = get_conf_value("Openmatb", "fullscreen")
-
-        super().__init__(
-            fullscreen=self._fullscreen, width=self._width, height=self._height, vsync=True, *args, **kwargs
-        )
+        # 全屏时不传 width/height，避免 NoSuchScreenModeException（如竖屏 2160x3840 可能无对应模式）
+        if self._fullscreen:
+            super().__init__(fullscreen=True, screen=screen, vsync=True, *args, **kwargs)
+            self._width, self._height = self.get_size()
+        else:
+            self._width = int(screen.width)
+            self._height = int(screen.height)
+            super().__init__(
+                fullscreen=False, width=self._width, height=self._height, vsync=True, *args, **kwargs
+            )
 
         img_path: Any = P["IMG"]
         logo16: Any = image.load(img_path.joinpath("logo16.png"))
@@ -67,15 +71,19 @@ class Window(Window):
             self.modal_dialog = ModalDialog(self, msg, title)
 
     def get_screen(self) -> Any:
-        # Screen definition
+        # Screen definition: 0 = 系统主屏 (primary), 1,2,... = 按 get_screens() 顺序的其它屏
         try:
             screen_index: int = get_conf_value("Openmatb", "screen_index")
         except (KeyError, TypeError):
             screen_index = 0
 
-        screens: list[Any] = get_display().get_screens()
-        if screen_index + 1 > len(screens):
-            screen: Any = screens[-1]
+        display: Any = get_display()
+        screens: list[Any] = display.get_screens()
+        if screen_index == 0:
+            # 使用系统设置的主显示器，避免跑到竖屏副屏
+            screen: Any = display.get_default_screen()
+        elif screen_index >= len(screens):
+            screen = screens[-1]
             from core.error import get_errors
 
             get_errors().add_error(
@@ -83,7 +91,7 @@ class Window(Window):
                     "In config.ini, the specified screen index exceeds the number of"
                     " available screens (%s). Last screen selected."
                 )
-                % len(get_display().get_screens())
+                % len(screens)
             )
         else:
             screen = screens[screen_index]

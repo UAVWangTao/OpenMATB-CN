@@ -10,11 +10,12 @@ from typing import Any
 
 from pyglet.window import key as winkey
 
-from core.constants import BFLIM, PLUGIN_TITLE_HEIGHT_PROPORTION, REPLAY_MODE
+from core.constants import BFLIM, PATHS, PLUGIN_TITLE_HEIGHT_PROPORTION, REPLAY_MODE
 from core.constants import COLORS as C
 from core.constants import FONT_SIZES as F
 from core.container import Container
 from core.logger import get_logger
+from core.utils import get_conf_value
 from core.widgets import Frame, SimpleHTML, Simpletext
 from core.window import Window
 
@@ -432,6 +433,21 @@ class BlockingPlugin(AbstractPlugin):
 
         if self.parameters["filename"] is not None:
             self.input_path = Path(".", self.folder, self.parameters["filename"])
+            # 界面为简体中文时，问卷/说明优先使用中文版（若存在）
+            if self.folder == PATHS["QUESTIONNAIRES"]:
+                try:
+                    lang: str = str(get_conf_value("Openmatb", "language") or "")
+                    if lang == "zh_Hans_CN":
+                        name: str = self.parameters["filename"]
+                        for suffix in ("_fr", "_en", "_en_EN", "_fr_FR"):
+                            if suffix in name:
+                                zh_name: str = name.replace(suffix, "_zh", 1)
+                                zh_path: Path = Path(".", self.folder, zh_name)
+                                if zh_path.exists():
+                                    self.input_path = zh_path
+                                break
+                except Exception:
+                    pass
 
         # Only if this input path exists, retrieve its content into slides (split with <newpage>)
         if self.input_path is not None and self.input_path.exists():
