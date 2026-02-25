@@ -180,7 +180,7 @@ class Window(Window):
 
             if keystr == "ESCAPE":
                 self.exit_prompt()
-            elif keystr == "P":
+            elif keystr.upper() == "P" or symbol == winkey.P:
                 self.pause_prompt()
 
             get_logger().record_input("keyboard", keystr, "press")
