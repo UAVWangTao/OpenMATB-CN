@@ -2,6 +2,17 @@ from __future__ import annotations
 
 from typing import Any
 
+import sys
+
+import pyglet
+
+# On Windows, many controllers appear as XInput devices. The legacy
+# `pyglet.input.get_joysticks()` API may not list them. Disabling XInput makes
+# pyglet fall back to DirectInput, improving detection for many 2.4GHz
+# receivers.
+if sys.platform == "win32":
+    pyglet.options["win32_disable_xinput"] = True
+
 import pyglet.input
 
 from core.constants import REPLAY_MODE
@@ -98,4 +109,8 @@ if not REPLAY_MODE:
         joystick = Joystick(joystick_device)
         joykey = joystick.keys
     else:
-        get_errors().add_error(_("No joystick found"))
+        get_errors().add_error(
+            "未检测到操纵杆：pyglet 的 `get_joysticks()` 返回为空。"
+            "请确认北通手柄在 Windows 里能被“游戏控制器”识别；"
+            "若仍不行，可能需要更换/启用 DirectInput 驱动或重启接收器后再试。"
+        )
