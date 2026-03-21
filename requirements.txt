@@ -1,4 +1,20 @@
+# OpenMATB — runtime dependencies
+# Python: 3.9+ (see README / README_zh.md)
+#
+# Install:
+#   python -m pip install -r requirements.txt
+#
+# Notes for deployment:
+# - pyglet: graphics, window, input, audio (communications task).
+# - rstr: random string generation (communications / regex helpers).
+# - pylsl: LabStreamingLayer plugin only; safe to install even if unused.
+# - pyparallel: parallel port plugin only. On Windows it often fails to build or
+#   is unnecessary — if install errors, omit this line or install without it and
+#   avoid using the parallelport plugin (the app skips it when missing).
+#
+# Developer tools, tests, and locale compilation: see requirements-dev.txt
+
 pyglet>=2.1.0,<3.0.0
-rstr==3.1.0
+rstr>=3.1.0,<4.0.0
+pylsl>=1.16.0,<2.0.0
 pyparallel==0.2.2
-pylsl==1.16.1

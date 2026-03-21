@@ -107,7 +107,7 @@ python -m pip install -r requirements.txt
 0:02:30;scheduling;stop
 ```
 
-通过场景文件可以控制各任务/模块、修改参数并触发事件。掌握场景语法与模块选项后，即可更灵活地定制 OpenMATB 场景。详见 [场景编写教程](https://github.com/juliencegarra/OpenMATB/wiki/How-to-build-a-scenario-file)。
+通过场景文件可以控制各任务/模块、修改参数并触发事件。掌握场景语法与模块选项后，即可更灵活地定制 OpenMATB 场景。中文说明见 **[includes/scenarios/场景文件编写说明.md](includes/scenarios/场景文件编写说明.md)**；英文原版 Wiki：[How to build a scenario file](https://github.com/juliencegarra/OpenMATB/wiki/How-to-build-a-scenario-file)。
 
 场景结束后，运行过程会以逗号分隔的 .csv 形式保存在 `sessions` 目录下。该日志包含分析场景与计算绩效所需的信息，格式如下：
 

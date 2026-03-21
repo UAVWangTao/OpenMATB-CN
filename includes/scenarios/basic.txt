@@ -20,8 +20,8 @@
 # Change the callsign format, the number of distractive callsigns, the voice gender and idiom
 0:00:00;communications;callsignregex;[A-Z][A-Z]\d\d
 0:00:00;communications;othercallsignnumber;5
-0:00:00;communications;voicegender;male
-0:00:00;communications;voiceidiom;french
+0:00:00;communications;voicegender;female
+0:00:00;communications;voiceidiom;chinese
 
 
 # 2. Start appropriate tasks

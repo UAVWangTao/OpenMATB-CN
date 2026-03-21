@@ -491,7 +491,7 @@ class TestWriteScenarioFile:
         with patch.dict("scenario_generation.PATHS", {"SCENARIOS": tmp_path}):
             path = write_scenario_file(lines, config)
         assert path.exists()
-        content = path.read_text()
+        content = path.read_text(encoding="utf-8")
         assert "# OpenMATB scenario generator" in content
         assert "# Name: test_scenario" in content
         assert "track" in content

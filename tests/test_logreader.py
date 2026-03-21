@@ -105,7 +105,8 @@ class TestReloadSession:
             "logtime,scenario_time,type,module,address,value\n"
             "0.000,0.0,event,sysmon,self,start\n"
             "0.001,30.0,event,sysmon,self,pause\n"
-            "0.002,60.0,event,resman,pump-1-state,on\n"
+            "0.002,60.0,event,resman,pump-1-state,on\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -119,7 +120,8 @@ class TestReloadSession:
         csv_file.write_text(
             "logtime,scenario_time,type,module,address,value\n"
             "0.001,0.0,event,sysmon,self,start\n"
-            "0.002,5.0,input,keyboard,F1,press\n"
+            "0.002,5.0,input,keyboard,F1,press\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -132,7 +134,8 @@ class TestReloadSession:
         csv_file.write_text(
             "logtime,scenario_time,type,module,address,value\n"
             "0.001,0.0,event,track,self,start\n"
-            "0.002,5.0,input,device,joystick_x,0.5\n"
+            "0.002,5.0,input,device,joystick_x,0.5\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -147,7 +150,8 @@ class TestReloadSession:
             "0.000,0.0,event,sysmon,self,start\n"
             "0.001,5.0,event,sysmon,self,pause\n"
             "0.002,8.0,event,parallelport,self,start\n"
-            "0.003,10.0,event,sysmon,self,stop\n"
+            "0.003,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -159,7 +163,8 @@ class TestReloadSession:
         csv_file.write_text(
             "logtime,scenario_time,type,module,address,value\n"
             "0.001,0.0,event,sysmon,self,start\n"
-            "0.002,300.0,event,sysmon,self,stop\n"
+            "0.002,300.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -174,7 +179,8 @@ class TestReloadSession:
             "logtime,scenario_time,type,module,address,value\n"
             "0.000,0.0,event,sysmon,self,start\n"
             '0.002,5.0,state,communications,radio_frequency,"(110.0,)"\n'
-            "0.003,10.0,event,sysmon,self,stop\n"
+            "0.003,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -187,7 +193,8 @@ class TestReloadSession:
         csv_file.write_text(
             "logtime,scenario_time,type,module,address,value\n"
             "100.0,0.0,event,sysmon,self,start\n"
-            "110.0,10.0,event,sysmon,self,stop\n"
+            "110.0,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -199,7 +206,8 @@ class TestReloadSession:
         csv_file.write_text(
             "logtime,scenario_time,type,module,address,value\n"
             "100.0,0.0,event,sysmon,self,start\n"
-            "105.0,5.0,input,keyboard,F1,press\n"
+            "105.0,5.0,input,keyboard,F1,press\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -212,7 +220,8 @@ class TestReloadSession:
             "logtime,scenario_time,type,module,address,value\n"
             "0.0,0.0,event,sysmon,self,start\n"
             "5.0,5.0,event,instructions,self,start\n"
-            "10.0,10.0,event,sysmon,self,stop\n"
+            "10.0,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -225,7 +234,8 @@ class TestReloadSession:
             "logtime,scenario_time,type,module,address,value\n"
             "0.0,0.0,event,sysmon,self,start\n"
             "5.0,5.0,event,genericscales,self,start\n"
-            "10.0,10.0,event,sysmon,self,stop\n"
+            "10.0,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -309,7 +319,8 @@ class TestBlockingSegmentDetection:
             "logtime,scenario_time,type,module,address,value\n"
             "0.0,0.0,event,sysmon,self,start\n"
             "5.0,5.0,event,sysmon,self,pause\n"
-            "10.0,10.0,event,sysmon,self,stop\n"
+            "10.0,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -326,7 +337,8 @@ class TestBlockingSegmentDetection:
             "8.0,5.0,input,keyboard,SPACE,press\n"
             "12.0,5.0,input,keyboard,SPACE,press\n"
             "12.1,5.1,event,sysmon,self,resume\n"
-            "20.0,13.0,event,sysmon,self,stop\n"
+            "20.0,13.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -344,7 +356,8 @@ class TestBlockingSegmentDetection:
             "0.0,0.0,event,sysmon,self,start\n"
             "5.0,5.0,event,sysmon,light-1-color,green\n"
             "5.1,5.0,event,sysmon,light-2-color,red\n"
-            "10.0,10.0,event,sysmon,self,stop\n"
+            "10.0,10.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()
@@ -368,7 +381,8 @@ class TestBlockingSegmentDetection:
             "30.0,15.0,input,keyboard,SPACE,press\n"
             "35.0,15.0,input,keyboard,SPACE,press\n"
             "35.1,15.1,event,sysmon,self,resume\n"
-            "45.0,25.0,event,sysmon,self,stop\n"
+            "45.0,25.0,event,sysmon,self,stop\n",
+            encoding="utf-8",
         )
         lr = _make_logreader(session_file_path=csv_file)
         lr.reload_session()

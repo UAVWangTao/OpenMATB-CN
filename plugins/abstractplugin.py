@@ -452,7 +452,7 @@ class BlockingPlugin(AbstractPlugin):
         # Only if this input path exists, retrieve its content into slides (split with <newpage>)
         if self.input_path is not None and self.input_path.exists():
             self.slides.append("")  # Create the first slide
-            lines: list[str] = self.input_path.open(encoding="utf8").readlines()
+            lines: list[str] = self.input_path.open(encoding="utf-8").readlines()
 
             if self.ignore_empty_lines:
                 lines = [l for l in lines if len(l.strip()) > 0]

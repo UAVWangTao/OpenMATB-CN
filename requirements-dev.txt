@@ -1,4 +1,12 @@
+# Development / CI / optional tooling (install after requirements.txt):
+#   pip install -r requirements.txt -r requirements-dev.txt
+#
+# Babel: compile gettext catalogs, e.g.
+#   pybabel compile -D openmatb -d locales -l zh_Hans_CN
+
+Babel>=2.12.0,<3.0.0
 pytest>=7.4.0
 pytest-cov>=4.1.0
 pytest-mock>=3.11.0
 ruff>=0.8.0
+
